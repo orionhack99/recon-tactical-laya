@@ -18,8 +18,10 @@ WORKDIR /app
 
 # Copy requirements and install Python dependencies
 COPY requirements.txt .
-RUN pip install --no-cache-dir --upgrade pip && \
-    pip install --no-cache-dir -r requirements.txt
+RUN pip install --upgrade pip
+# Removemos o --no-cache-dir temporariamente apenas para ver o log completo do erro
+RUN pip install -r requirements.txt
+
 
 # Copy application files
 COPY . /app/

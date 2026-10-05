@@ -1,6 +1,6 @@
-requests>=2.31.0
-urllib3>=2.0.0
-Wappalyzer>=1.0.0
-laya>=1.0.0
-python-dateutil>=2.8.2
-concurrent-utils>=0.0.1
+requests
+urllib3
+Wappalyzer
+laya
+python-dateutil
+concurrent-utils

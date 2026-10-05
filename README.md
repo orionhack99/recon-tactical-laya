@@ -187,11 +187,6 @@ O uso de `verify=False` ignora validação TLS e `allow_redirects=False` inspeci
 ```
 recon-llama-laya/
 ├── recon-tactical-laya2.py      # Script principal (alta fidelidade)
-├── recon-tactical-laya.py       # Versão tática intermediária
-├── recon-wappalizer-llama-laya-acd.py  # Versão enriquecida
-├── recon-wappalizer-llama-laya.py       # Versão base + Wappalyzer
-├── recon-llama-laya.py          # Versão minimalista
-├── Laya-BF16.gguf               # Modelo GGUF (local)
 ├── requirements.txt             # Dependências Python
 ├── Dockerfile                   # Build Docker
 ├── docker-compose.yml           # Orquestração
