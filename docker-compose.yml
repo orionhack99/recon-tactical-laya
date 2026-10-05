@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  recon-laya:
+    build: .
+    container_name: recon-laya-tactical
+    volumes:
+      - ./:/app
+      - /tmp/recon-outputs:/tmp/recon-outputs
+    environment:
+      - PYTHONUNBUFFERED=1
+    stdin_open: true
+    tty: true
+    network_mode: "host"  # For better network access during recon
+    command: ["--help"]
