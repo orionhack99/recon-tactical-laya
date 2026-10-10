@@ -1,0 +1,132 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" role="img" aria-labelledby="title desc">
+  <title id="title">Recon Laya — Cognitive Recon Triage with AI Decision Engine</title>
+  <desc id="desc">Banner do projeto Recon Laya em estilo terminal dark com verde neon.</desc>
+
+  <defs>
+    <!-- Backgrounds -->
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0B1118"/>
+      <stop offset="1" stop-color="#05080B"/>
+    </linearGradient>
+
+    <radialGradient id="glow" cx="0.16" cy="0.02" r="0.85">
+      <stop offset="0" stop-color="#12FF8C" stop-opacity="0.20"/>
+      <stop offset="0.5" stop-color="#12FF8C" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#12FF8C" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="radarGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#12FF8C" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#12FF8C" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="titleGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#9CFFC8"/>
+      <stop offset="0.45" stop-color="#12FF8C"/>
+      <stop offset="1" stop-color="#25E6FF"/>
+    </linearGradient>
+
+    <linearGradient id="barGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#12FF8C" stop-opacity="0"/>
+      <stop offset="0.5" stop-color="#12FF8C" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#25E6FF" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="sweepGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#12FF8C" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#12FF8C" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Grid pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0 H0 V40" fill="none" stroke="#12FF8C" stroke-width="1" opacity="0.055"/>
+    </pattern>
+
+    <!-- Neon glow filter -->
+    <filter id="neon" x="-40%" y="-60%" width="180%" height="220%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.2" result="b1"/>
+      <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="b2"/>
+      <feMerge>
+        <feMergeNode in="b2"/>
+        <feMergeNode in="b1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="2.5" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Frame -->
+  <rect x="0.5" y="0.5" width="1199" height="299" rx="16" fill="url(#bg)" stroke="#16321F" stroke-width="1"/>
+  <rect x="1" y="1" width="1198" height="298" rx="15" fill="url(#grid)"/>
+  <rect x="1" y="1" width="1198" height="298" rx="15" fill="url(#glow)"/>
+
+  <!-- Terminal header bar -->
+  <path d="M1 17 A16 16 0 0 1 17 1 H1183 A16 16 0 0 1 1199 17 V41 H1 Z" fill="#0D1712" opacity="0.85"/>
+  <line x1="1" y1="41.5" x2="1199" y2="41.5" stroke="#1B3A28" stroke-width="1"/>
+  <circle cx="28" cy="21" r="6" fill="#FF5F56"/>
+  <circle cx="50" cy="21" r="6" fill="#FFBD2E"/>
+  <circle cx="72" cy="21" r="6" fill="#27C93F"/>
+  <text x="100" y="26" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="13" fill="#6F8C7C">recon-laya — secure shell</text>
+  <text x="1120" y="26" text-anchor="end" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="12" fill="#2E5A41" letter-spacing="2">// v2.0</text>
+
+  <!-- Corner reticle brackets -->
+  <g stroke="#12FF8C" stroke-width="2" opacity="0.55" fill="none">
+    <path d="M22 64 V46 H40"/>
+    <path d="M1178 64 V46 H1160"/>
+    <path d="M22 236 V254 H40"/>
+    <path d="M1178 236 V254 H1160"/>
+  </g>
+
+  <!-- Radar -->
+  <g transform="translate(1012 162)">
+    <circle r="118" fill="url(#radarGlow)"/>
+    <g fill="none" stroke="#12FF8C">
+      <circle r="34" opacity="0.30"/>
+      <circle r="68" opacity="0.22"/>
+      <circle r="102" opacity="0.15"/>
+    </g>
+    <g stroke="#12FF8C" stroke-width="1" opacity="0.16">
+      <line x1="-102" y1="0" x2="102" y2="0"/>
+      <line x1="0" y1="-102" x2="0" y2="102"/>
+      <line x1="-72" y1="-72" x2="72" y2="72"/>
+      <line x1="-72" y1="72" x2="72" y2="-72"/>
+    </g>
+    <!-- Sweep wedge -->
+    <path d="M0 0 L0 -102 A102 102 0 0 1 88.3 -51 Z" fill="url(#sweepGrad)"/>
+    <line x1="0" y1="0" x2="88.3" y2="-51" stroke="#7CFFB2" stroke-width="2" opacity="0.8"/>
+    <!-- Blips -->
+    <circle cx="34" cy="-58" r="4.5" fill="#7CFFB2" filter="url(#softGlow)"/>
+    <circle cx="-52" cy="22" r="3.5" fill="#25E6FF" filter="url(#softGlow)"/>
+    <circle cx="18" cy="66" r="3" fill="#7CFFB2" opacity="0.85"/>
+    <circle r="3" fill="#12FF8C" filter="url(#softGlow)"/>
+  </g>
+
+  <!-- Eyebrow -->
+  <text x="64" y="100" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="14" fill="#3FBF7A" opacity="0.9" letter-spacing="3.5">// COGNITIVE RECON TRIAGE — AI DECISION ENGINE</text>
+
+  <!-- Title -->
+  <text x="60" y="178" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="70" font-weight="700" letter-spacing="3" fill="url(#titleGrad)" filter="url(#neon)">RECON LAYA</text>
+
+  <!-- Tagline -->
+  <text x="65" y="212" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="15" fill="#8FA9A0" letter-spacing="0.5">Subdomain Enum · HTTP Validation · Tech Fingerprint · AI Risk Ranking</text>
+
+  <!-- Prompt pill -->
+  <g>
+    <rect x="64" y="230" width="452" height="42" rx="9" fill="#0C1811" stroke="#1F6F3F" stroke-width="1"/>
+    <text x="82" y="257" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'DejaVu Sans Mono', monospace" font-size="15">
+      <tspan fill="#3FBF7A">$</tspan>
+      <tspan fill="#CFE9DC"> recon-laya -d example.com -oj report.json</tspan>
+    </text>
+    <rect x="474" y="245" width="9" height="16" fill="#12FF8C"/>
+  </g>
+
+  <!-- Bottom accent bar -->
+  <rect x="0" y="297" width="1200" height="3" fill="url(#barGrad)"/>
+</svg>

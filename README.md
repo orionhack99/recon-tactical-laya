@@ -4,6 +4,10 @@
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Docker](https://img.shields.io/badge/Docker-Ready-blue.svg)](Dockerfile)
 
+<p align="center">
+  <img src="assets/banner.png" alt="Recon Laya — Cognitive Recon Triage with AI Decision Engine" width="100%">
+</p>
+
 > **Recon Laya** é um toolkit de reconhecimento web cognitivo que combina enumeração passiva de subdomínios, validação HTTP ativa, fingerprinting de tecnologias (Wappalyzer) e um motor de decisão baseado em IA (Laya) para triagem e priorização automática de alvos por criticidade/risco.
 
 ## 🎯 Principais Funcionalidades
@@ -119,6 +123,14 @@ docker run --rm --network host -v $(pwd)/outputs:/tmp/outputs \
 
 ## 📊 Exemplo de Saída
 
+### Terminal (execução real)
+
+<p align="center">
+  <img src="assets/recon.png" alt="Execução do Recon Laya contra vulnweb.com: enumeração passiva, validação ativa e ranking de alvos por score" width="100%">
+</p>
+
+<sub>Alvo `vulnweb.com` — 584 subdomínios enumerados, validação ativa e ranking Laya (3 hosts ativos priorizados por score).</sub>
+
 ### Console (Ranking)
 ```
 ==================== HIGH-FIDELITY LAYA RANKING ====================
@@ -187,6 +199,10 @@ O uso de `verify=False` ignora validação TLS e `allow_redirects=False` inspeci
 ```
 recon-llama-laya/
 ├── recon-tactical-laya2.py      # Script principal (alta fidelidade)
+├── assets/
+│   ├── banner.svg               # Banner (fonte vetorial editável)
+│   ├── banner.png               # Banner renderizado (usado no README)
+│   └── recon.png                # Captura de exemplo (saída da ferramenta)
 ├── requirements.txt             # Dependências Python
 ├── Dockerfile                   # Build Docker
 ├── docker-compose.yml           # Orquestração
